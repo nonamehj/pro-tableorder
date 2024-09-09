@@ -1,0 +1,586 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-section {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  z-index: 999;
+  padding: 0.7rem;
+  overflow: hidden;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.modal-item::-webkit-scrollbar {
+  display: none;
+}
+.modal-item {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+.modal-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  margin-bottom: 6px;
+  /* border: 1px solid red; */
+}
+.modal-menuItem {
+  flex: 0 0 250px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+.single-img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1.25rem;
+}
+.modal-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 50px; */
+  /* border: 1px solid red; */
+}
+.modal-title h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3rem;
+  margin-bottom: 4px;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  padding: 2px;
+}
+.modal-title span {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  padding: 2px;
+}
+
+.hot-iced {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+  transition: all 0.3s linear;
+}
+
+.hot-iced button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.order-hot {
+  color: red;
+  border: 2px solid red;
+}
+.order-iced {
+  color: blue;
+  border: 2px solid blue;
+}
+.order-hot:hover {
+  background-color: red;
+  color: #fff;
+}
+.order-iced:hover {
+  background-color: blue;
+  color: #fff;
+}
+.order-iced.active-iced {
+  background-color: blue;
+  color: #fff;
+}
+.order-hot.active-hot {
+  background-color: red;
+  color: #fff;
+}
+
+.modal-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  transition: all 0.3s linear;
+  overflow-y: auto;
+}
+
+.coffee-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.coffee-row > h4 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.coffee-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.coffee-option h4 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.coffee-option h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-row {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+}
+.btn-row .minus,
+.btn-row .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.btn-row h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee-size {
+  flex: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.coffee-size:hover {
+  background-color: #000;
+  color: #fff;
+}
+.active-size {
+  background-color: black;
+  color: #fff;
+}
+.modal-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-price h3 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.order-btn {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+}
+
+.order-btn button {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  margin: 0 30px;
+  border: 2px solid black;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+
+.order-close-btn:hover,
+.order-select-btn:hover {
+  background-color: black;
+  color: #fff;
+}
+.order-select-btn:disabled {
+  background-color: gray;
+  color: darkgray;
+  border: 2px solid darkgray;
+  cursor: default;
+}
+.order-select-btn:disabled:hover {
+  background-color: gray;
+  color: darkgray;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-section {
+    max-width: 600px;
+    width: 85vw;
+    height: 85vh;
+    /* border: 1px solid red; */
+  }
+  .modal-menuItem {
+    flex: 0 0 160px;
+
+    /**/
+    gap: 2;
+  }
+  .single-img {
+    /* flex: 0 0 200px; */
+    flex: 0 0 50%;
+  }
+  .modal-title {
+    margin: 0;
+
+    /**/
+    /* flex: 0 0 50%; */
+
+    flex: 1;
+  }
+  .modal-title h3 {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+  }
+  .modal-title span {
+    font-size: 1rem;
+  }
+  /**/
+  .hot-iced {
+    flex: 0 0 45px;
+    margin-bottom: 2px;
+  }
+  .hot-iced button {
+    width: 110px;
+    margin: 0 18px;
+    font-size: 1.2rem;
+  }
+  /**/
+  .coffee-row {
+    flex: 0 0 80px;
+    flex-direction: column;
+    margin-bottom: 4px;
+    border: none;
+  }
+  .coffee-row > h4 {
+    flex: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  /**/
+  .coffee-option {
+    flex: 0 0 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .coffee-option h4 {
+    font-size: 1.1rem;
+  }
+  .coffee-option h5 {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  /**/
+  .btn-row {
+    flex: 0 0 40px;
+    width: 100%;
+  }
+  .btn-row .minus,
+  .btn-row .plus {
+    font-size: 1.2rem;
+  }
+  .btn-row h3 {
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+  }
+  /**/
+  .coffee-size {
+    font-size: 0.9rem;
+  }
+  /**/
+  .modal-price {
+    flex: 0 0 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .modal-price h3 {
+    font-size: 1.3rem;
+  }
+  /**/
+  .order-btn {
+    flex: 0 0 60px;
+    padding: 4px 0;
+  }
+  .order-btn button {
+    width: 140px;
+    font-size: 1.4rem;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .modal-section {
+    max-width: 800px;
+    width: 90vw;
+    height: 90vh;
+  }
+  .modal-menuItem {
+    flex: 0 0 180px;
+
+    /**/
+    gap: 2;
+  }
+  .single-img {
+    flex: 0 0 230px;
+    /**/
+    flex: 0 0 50%;
+  }
+  .modal-title {
+    margin: 0;
+    /**/
+    /* padding: 0; */
+    /* flex: 0 0 50%; */
+    flex: 1;
+  }
+  .modal-title h3 {
+    font-size: 1.5rem;
+  }
+  .modal-title span {
+    font-size: 1.2rem;
+  }
+  /**/
+  .hot-iced {
+    flex: 0 0 55px;
+    margin-bottom: 4px;
+    /* border: 1px solid red; */
+  }
+  .hot-iced button {
+    width: 130px;
+    margin: 0 22px;
+    font-size: 1.4rem;
+  }
+
+  /**/
+  .coffee-row {
+    flex: 0 0 50px;
+    margin-bottom: 4px;
+    padding: 2px 4px;
+  }
+  .coffee-row > h4 {
+    flex: 0 50%;
+    padding-left: 6px;
+    font-size: 1.2rem;
+  }
+
+  /**/
+  .coffee-option {
+    flex: 0 50%;
+  }
+
+  .coffee-option h4 {
+    font-size: 1.2rem;
+    padding-left: 4px;
+  }
+  .coffee-option h5 {
+    margin-right: 4px;
+    font-size: 1rem;
+  }
+  .coffee-option h4 {
+    font-size: 1.4rem;
+    padding-left: 6px;
+  }
+  .coffee-option h5 {
+    margin-right: 6px;
+    font-size: 1.2rem;
+  }
+  /**/
+  .btn-row .minus,
+  .btn-row .plus {
+    font-size: 1.5rem;
+  }
+  .btn-row h3 {
+    font-size: 1.5rem;
+  }
+  /**/
+  .coffee-size {
+    font-size: 1rem;
+    /* border: 1px solid blue; */
+  }
+  /**/
+  .modal-price {
+    flex: 0 0 50px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* border: 1px solid red; */
+  }
+  .modal-price h3 {
+    font-size: 1.5rem;
+  }
+  /**/
+  .order-btn {
+    flex: 0 0 70px;
+    padding: 4px 0;
+    /* border: 1px solid red; */
+  }
+  .order-btn button {
+    width: 160px;
+    font-size: 1.6rem;
+    margin: 0 25px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .modal-section {
+    max-width: 1000px;
+    width: 85vw;
+    height: 85vh;
+  }
+  .modal-menuItem {
+    flex: 0 0 200px;
+  }
+  .single-img {
+    /* flex: 0 0 250px; */
+    /**/
+    flex: 0 0 50%;
+    /* border: 1px solid red; */
+  }
+  .modal-title {
+    flex: 0 0 50%;
+    /**/
+    flex: 1;
+    margin: 0;
+    /* border: 1px solid red; */
+  }
+  .modal-title h3 {
+    /* font-size: 1.7rem; */
+    font-size: 2rem;
+  }
+  .modal-title span {
+    text-transform: capitalize;
+    /* font-size: 1.4rem; */
+    font-size: 1.6rem;
+  }
+  /**/
+  .hot-iced {
+    flex: 0 0 70px;
+    margin-bottom: 6px;
+  }
+  .hot-iced button {
+    width: 150px;
+    margin: 0 26px;
+    font-size: 1.6rem;
+  }
+  /**/
+  .coffee-row {
+    flex: 0 0 60px;
+    margin-bottom: 6px;
+    padding: 2px 6px;
+  }
+  .coffee-row > h4 {
+    flex: 0 50%;
+    padding-left: 8px;
+    font-size: 1.4rem;
+    /* border: 1px solid red; */
+  }
+  /**/
+  .coffee-option {
+    flex: 0 50%;
+    /* border: 1px solid blue; */
+  }
+  .coffee-option h4 {
+    font-size: 1.4rem;
+    padding-left: 6px;
+  }
+  .coffee-option h5 {
+    margin-right: 6px;
+    font-size: 1.2rem;
+  }
+  /**/
+  .btn-row .minus,
+  .btn-row .plus {
+    font-size: 1.7rem;
+  }
+  .btn-row h3 {
+    font-size: 1.7rem;
+  }
+  /**/
+  .coffee-size {
+    font-size: 1.25rem;
+  }
+  /**/
+  .modal-price {
+    flex: 0 0 70px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    /* border: 1px solid red; */
+  }
+  .modal-price h3 {
+    font-size: 1.7rem;
+  }
+  /**/
+  .order-btn {
+    flex: 0 0 90px;
+    padding: 6px 0;
+  }
+  .order-btn button {
+    width: 190px;
+    font-size: 1.8rem;
+    margin: 0 30px;
+  }
+}

@@ -1,0 +1,59 @@
+.section::-webkit-scrollbar,
+.menulist-container::-webkit-scrollbar {
+  display: none;
+}
+.section,
+.menulist-container {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+  background-color: #f0f0f0;
+}
+
+.menulist-container {
+  /* width: calc(100% - 6px); */
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+.menulist-center {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .menulist-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+@media screen and (min-width: 901px) {
+  .menulist-container {
+    position: absolute;
+    overflow: auto;
+  }
+  .menulist-center {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menulist-center {
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

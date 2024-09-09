@@ -1,0 +1,359 @@
+/*addItems 자식*/
+.addItems-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+/*addItems-container의 자식*/
+.addItems-center {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/*addItems-container의 자식들*/
+.addItem-move {
+  flex: 0 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  background-color: transparent;
+  border-color: transparent;
+  /* border: 1px solid red; */
+}
+.addItem-move:hover {
+  background-color: black;
+  color: #fff;
+}
+/*스크롤 제거*/
+.addItem-list::-webkit-scrollbar {
+  display: none;
+}
+.addItem-list {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.addItem-list {
+  flex: 1;
+  display: flex;
+  padding: 0 4px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+/*addItem-list 의 자식*/
+.addItem-article {
+  position: relative;
+  margin: 0 2px;
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  padding: 2px 0;
+}
+.activeSlide {
+}
+
+.lastSlide {
+  transform: translateX(-100%);
+  display: none;
+}
+/*addItem-article 의 자식*/
+.addItem-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 3px;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #fff;
+  border-color: #000;
+  color: black;
+  opacity: 0.7;
+  transition: all 0.3 linear;
+  z-index: 999;
+}
+.addItem-remove:hover {
+  opacity: 1;
+  border-color: red;
+  color: red;
+}
+.addItem-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.addItem-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.addItem-title {
+  flex: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 3px;
+}
+.addItem-btn {
+  flex: 0 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.addItem-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  height: 100%;
+  font-size: 1rem;
+  padding: 2px;
+  /* border: 1px solid red; */
+}
+/*addItems-container 의 자식*/
+.addItem-total {
+  /* flex: 0 0 180px; */
+  flex: 0 0 190px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+}
+.payment-summary {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.total-summary {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* padding: 2px; */
+  background-color: black;
+  color: #fff;
+}
+.btn-total-cancel {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  background-color: black;
+  color: #fff;
+  border-color: transparent;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+.btn-total-cancel:hover {
+  background-color: #fff;
+  color: #000;
+  border-radius: 0.25rem;
+}
+/*601px 이상 수정*/
+.total-summary p {
+  color: yellow;
+  font-size: 1rem;
+}
+.total-summary h3 {
+  font-size: 1.3rem;
+  color: yellow;
+}
+.btn-total-cancel {
+  display: block;
+}
+.btn-confirm-order {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  background-color: blue;
+  color: yellow;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.3 linear;
+  letter-spacing: 0.05rem;
+}
+
+@media screen and (max-width: 600px) {
+  .addItem-move {
+    flex: 0 20px;
+    padding: 2px;
+  }
+  .addItem-list {
+    padding: 0 2px;
+  }
+  .addItem-article {
+    margin: 0 2px;
+    flex: 0 0 100px;
+  }
+  .addItem-remove {
+    top: 2px;
+    right: 2px;
+    padding: 1px;
+    font-size: 0.8rem;
+  }
+  /**/
+  .addItem-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  /**/
+  .addItem-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .addItem-title {
+    flex: 0 25px;
+    font-size: 0.6rem;
+    padding: 2px;
+  }
+  .addItem-btn {
+    flex: 0 25px;
+  }
+  .addItem-total {
+    flex: 0 90px;
+    flex-direction: column;
+  }
+
+  .total-summary {
+    flex: 1;
+  }
+  .btn-total-cancel {
+    display: none;
+  }
+  .btn-confirm-order {
+    flex: 0 0 50%;
+  }
+
+  .total-summary p {
+    font-size: 0.5rem;
+  }
+  .total-summary h3 {
+    font-size: 1rem;
+  }
+  .btn-confirm-order {
+    flex: 0 0 50%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .addItem-move {
+    flex: 0 25px;
+    padding: 3px;
+  }
+  .addItem-list {
+    padding: 0 3px;
+  }
+  .addItem-article {
+    flex: 0 0 125px;
+  }
+  .addItem-remove {
+    top: 4px;
+    right: 4px;
+    font-size: 0.9rem;
+  }
+  /**/
+  .addItem-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  /**/
+  .addItem-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .addItem-title {
+    font-size: 0.8rem;
+    padding: 3px;
+  }
+  .addItem-total {
+    flex: 0 0 160px;
+    margin-left: 4px;
+  }
+  .addItem-btn {
+    flex: 0 30px;
+  }
+  .total-summary p {
+    font-size: 0.7rem;
+  }
+  .total-summary h3 {
+    font-size: 1rem;
+  }
+  .btn-total-cancel {
+    font-size: 0.9rem;
+  }
+  .btn-confirm-order {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 901px) {
+  .addItem-article {
+    flex: 0 0 140px;
+    width: 100%;
+    height: 100%;
+  }
+  .addItem-remove {
+    z-index: 999;
+  }
+  .addItem-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .addItem-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .addItem-title {
+    font-size: 0.9rem;
+  }
+  .addItem-btn {
+    flex: 0 0 40px;
+  }
+
+  .total-summary p {
+    font-size: 0.75rem;
+  }
+  .total-summary h3 {
+    font-size: 1.2rem;
+  }
+  .btn-total-cancel {
+    font-size: 1rem;
+  }
+  .btn-confirm-order {
+    font-size: 1rem;
+  }
+}
