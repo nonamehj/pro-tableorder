@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pro-tableorder/static/css/main.e4c19631.css",
-    "main.js": "/pro-tableorder/static/js/main.7f8f9fdc.js",
+    "main.css": "/pro-tableorder/static/css/main.9fce44b0.css",
+    "main.js": "/pro-tableorder/static/js/main.8a47fd8d.js",
     "static/js/453.ca3ede5b.chunk.js": "/pro-tableorder/static/js/453.ca3ede5b.chunk.js",
     "static/media/밀크티.jpg": "/pro-tableorder/static/media/밀크티.52710374c076b5ddee1a.jpg",
     "static/media/얼그레이.jpg": "/pro-tableorder/static/media/얼그레이.c5602f67774ad5e7282d.jpg",
@@ -14,7 +14,6 @@
     "static/media/코코넛라떼.jpg": "/pro-tableorder/static/media/코코넛라떼.2da83e01d559686e18c0.jpg",
     "static/media/허니자몽블랙티.jpg": "/pro-tableorder/static/media/허니자몽블랙티.c3c80e8a54d406a92215.jpg",
     "static/media/레몬에이드.jpg": "/pro-tableorder/static/media/레몬에이드.14693c04037f1af91bef.jpg",
-    "static/media/cafeLogo.png": "/pro-tableorder/static/media/cafeLogo.a6f3f736416cf75108d8.png",
     "static/media/자몽에이드.jpg": "/pro-tableorder/static/media/자몽에이드.a79122341308222e10e5.jpg",
     "static/media/자몽스무디.jpg": "/pro-tableorder/static/media/자몽스무디.d74e796721193d0df5dd.jpg",
     "static/media/패션코코에이드.jpg": "/pro-tableorder/static/media/패션코코에이드.26ce4460cb2c93f813d2.jpg",
@@ -28,12 +27,12 @@
     "static/media/키위에이드.jpg": "/pro-tableorder/static/media/키위에이드.29154c660ea2d10ee191.jpg",
     "static/media/바닐라라떼.jpg": "/pro-tableorder/static/media/바닐라라떼.ba193e12d01d19ebd073.jpg",
     "index.html": "/pro-tableorder/index.html",
-    "main.e4c19631.css.map": "/pro-tableorder/static/css/main.e4c19631.css.map",
-    "main.7f8f9fdc.js.map": "/pro-tableorder/static/js/main.7f8f9fdc.js.map",
+    "main.9fce44b0.css.map": "/pro-tableorder/static/css/main.9fce44b0.css.map",
+    "main.8a47fd8d.js.map": "/pro-tableorder/static/js/main.8a47fd8d.js.map",
     "453.ca3ede5b.chunk.js.map": "/pro-tableorder/static/js/453.ca3ede5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4c19631.css",
-    "static/js/main.7f8f9fdc.js"
+    "static/css/main.9fce44b0.css",
+    "static/js/main.8a47fd8d.js"
   ]
 }
